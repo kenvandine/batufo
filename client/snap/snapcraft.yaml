@@ -1,0 +1,28 @@
+name: batufo
+version: "0.0"
+summary: UFO multi-player
+description: |
+  UFO multi-player game using Flutter.
+
+  Set against a beautiful universe backdrop it allows players from all over
+  the world to compete against each other in realtime.
+
+confinement: strict
+base: core18
+grade: stable
+apps:
+  batufo:
+    command: bin/client
+    extensions: [gnome-3-28]
+    plugs:
+      - x11
+      - opengl
+      - network
+
+parts:
+  batufo:
+    source: .
+    plugin: flutter
+    flutter-channel: master # Which Flutter channel to use for the build
+    flutter-target: lib/main/desktop.release.dart # The main entry-point file of the application
+

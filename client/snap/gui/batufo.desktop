@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=UFO multi-player game
+Comment=UFO multi-player game using Flutter
+Icon=${SNAP}/meta/gui/icon.png
+Exec=batufo %U
+Terminal=false
+Type=Application
+Categories=Games;
+Keywords=Games;
+StartupNotify=false
