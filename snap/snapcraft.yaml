@@ -22,6 +22,7 @@ apps:
 parts:
   batufo:
     source: .
+    source-subdir: client
     plugin: flutter
     flutter-channel: master # Which Flutter channel to use for the build
     flutter-target: lib/main/desktop.release.dart # The main entry-point file of the application
