@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=UFO multi-player game
-Comment=UFO multi-player game using Flutter
+Name=UFO Multiplayer Space Battle
+Comment=2D Multiplayer Space Battle Game
 Icon=${SNAP}/meta/gui/icon.png
 Exec=batufo %U
 Terminal=false
