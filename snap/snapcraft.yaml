@@ -15,6 +15,9 @@ description: |
 confinement: strict
 base: core18
 grade: stable
+architectures:
+  - build-on: amd64
+
 apps:
   batufo:
     command: bin/client
