@@ -18,25 +18,13 @@ grade: stable
 apps:
   batufo:
     command: bin/client
-    extensions: [gnome-3-28]
+    extensions: [flutter-master]
     plugs:
-      - x11
-      - opengl
       - network
 
 parts:
   batufo:
     source: .
-    plugin: nil
-    override-build: |
-      set -eux
-      snapcraftctl build
-      cd client
-      flutter channel master
-      flutter config --enable-linux-desktop
-      flutter pub get
-      flutter build linux --release -t lib/main/desktop.release.dart
-      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
-      cp -r build/linux/release/bundle/* $SNAPCRAFT_PART_INSTALL/bin/
-    build-snaps:
-      - flutter/latest/edge
+    source-subdir: client
+    plugin: flutter
+    flutter-target: lib/main/desktop.release.dart
